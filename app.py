@@ -4,17 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load models (disable compile to speed up)
-encoder = tf.keras.models.load_model("models\encoder.keras", compile=False)
-decoder = tf.keras.models.load_model("models\decoder.keras", compile=False)
-
-import streamlit as st
-import numpy as np
-import tensorflow as tf
-import matplotlib.pyplot as plt
-
-# Load models (trained CVAE encoder and decoder)
-encoder = tf.keras.models.load_model("encoder.keras", compile=False)
-decoder = tf.keras.models.load_model("decoder.keras", compile=False)
+encoder = tf.keras.models.load_model("models/encoder.h5", compile=False)
+decoder = tf.keras.models.load_model("models/decoder.h5", compile=False)
 
 # Generate digit images from decoder using encoded real MNIST digits
 def generate_digit_images(digit, n=5):
